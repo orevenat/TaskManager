@@ -8,7 +8,7 @@ FactoryBot.define do
     type { '' }
 
     factory :admin do
-      type { 'Developer' }
+      type { 'Admin' }
     end
 
     factory :developer do
