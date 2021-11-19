@@ -13,7 +13,7 @@ class Task < ApplicationRecord
     end
 
     event :back_to_dev do
-      transition %i[in_qa in_code_review] => :in_development
+      transition [:in_qa, :in_code_review] => :in_development
     end
 
     event :to_qa do
@@ -33,7 +33,7 @@ class Task < ApplicationRecord
     end
 
     event :archive do
-      transition %i[new_task released] => :archived
+      transition [:new_task, :released] => :archived
     end
   end
 end
