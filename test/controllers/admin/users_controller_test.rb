@@ -5,7 +5,13 @@ class Admin::UsersControllerTest < ActionController::TestCase
     admin = create(:admin)
     sign_in admin
   end
-  test "should get show" do
+
+  test 'should get index' do
+    get :index
+    assert_response :success
+  end
+
+  test 'should get show' do
     user = create(:user)
     get :show, params: { id: user.id }
     assert_response :success
