@@ -17,8 +17,12 @@ gem 'webpacker', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
+
+gem 'active_model_serializers'
 gem 'bcrypt', '~> 3.1.7'
+gem 'kaminari'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'responders'
 gem 'simple_form'
 gem 'state_machines'
 gem 'state_machines-activerecord'
