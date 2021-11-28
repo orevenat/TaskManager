@@ -16,9 +16,9 @@ class Api::V1::TasksControllerTest < ActionController::TestCase
   test 'should post create' do
     author = create(:manager)
     sign_in(author)
-    assigne = create(:developer)
-    task_attributes = attributes_for(:task).except(:expired_at).
-      merge({ assignee_id: assigne.id })
+    assignee = create(:developer)
+    task_attributes = attributes_for(:task).
+      merge({ assignee_id: assignee.id })
     post :create, params: { task: task_attributes, format: :json }
     assert_response :created
 
