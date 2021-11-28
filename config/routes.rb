@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   scope module: :web do
     resource :board, only: :show
     resource :session, only: %i[new create destroy]
-    resource :developers, only: %i[new create]
+    resources :developers, only: %i[new create]
+  end
+
+  namespace :admin do
+    resources :users
   end
 end
