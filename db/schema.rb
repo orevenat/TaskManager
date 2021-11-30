@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_11_07_164106) do
     t.integer "author_id"
     t.integer "assignee_id"
     t.string "state"
-    t.datetime "expired_at"
+    t.date "expired_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
